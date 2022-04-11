@@ -3,12 +3,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { HelloComponent } from './hello.component';
 import { BookFormComponent } from './book-form/book-form.component';
 
 @NgModule({
   imports: [BrowserModule, ReactiveFormsModule],
-  declarations: [AppComponent, HelloComponent, BookFormComponent],
+  declarations: [AppComponent, BookFormComponent],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
