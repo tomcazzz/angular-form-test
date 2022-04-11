@@ -1,7 +1,15 @@
 Hallo
 <form [formGroup]="myForm" (ngSubmit)="submitForm()">
-  <label>Benutzer</label>
-  <input type="text" formControlName="user" />
-  <label>Benutzer</label>
-  <input type="password" formControlName="password" />
+  <label>Benutzer:&nbsp;</label>
+  <input type="text" formControlName="user" /><span *ngIf="errors.user">{{
+    errors.user
+  }}</span
+  ><br />
+  <label>Password:&nbsp;</label>
+  <input type="password" formControlName="password" /><span
+    *ngIf="errors.password"
+    >{{ errors.password }}</span
+  ><br />
+  <button type="submit">Abschicken</button>
+  <button (click)="myForm.reset()">Löschen</button>
 </form>
